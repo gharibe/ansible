@@ -1,0 +1,14 @@
+# add alias
+alias 'ssha=eval $(ssh-agent) && ssh-add'
+#copy the ssh keys
+ssh-copy-id -i ~/.ssh/ansible.pub 192.168.1.53
+ssh-copy-id -i ~/.ssh/id_ed25519.pub 192.168.1.53
+
+# check connection
+ansible all -m ping
+
+#limit ot one host -m = moudle
+ansible all -m gather_facts --limit 192.168.1.100
+
+#run play book
+ ansible-playbook --ask-become-pass update.yml
