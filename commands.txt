@@ -12,3 +12,5 @@ ansible all -m gather_facts --limit 192.168.1.100
 
 #run play book
  ansible-playbook --ask-become-pass update.yml
+
+ scp user@remotehost:/home/persman/.ssh/id_ed25519 /Users/ashkan/.ssh
