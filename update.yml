@@ -22,3 +22,13 @@
     - name: Remove dependencies that are no longer required.
       ansible.builtin.apt:
         autoremove: yes
+
+    - name: Send notify to Telegram
+      community.general.telegram:
+        token: "6921496131:AAEhifOH4LssvC0j_9qqQO7W9vYQNjxWFk8"
+        api_args:
+            chat_id: 146919572
+            parse_mode: "markdown"
+            text: "{{ ansible_hostname }} Server has been updated and needs a reboot"
+            disable_web_page_preview: true
+            disable_notification: true
