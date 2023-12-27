@@ -25,7 +25,7 @@
 
     - name: Send notify to Telegram
       community.general.telegram:
-        token: "6921496131:AAEhifOH4LssvC0j_9qqQO7W9vYQNjxWFk8"
+        token: "Get_Token"
         api_args:
             chat_id: 146919572
             parse_mode: "markdown"
