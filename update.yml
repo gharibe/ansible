@@ -8,7 +8,7 @@
       ansible.builtin.apt:
         upgrade: dist
         update_cache: yes
-        dpkg_options: 'force-confold,force-confdef
+        dpkg_options: 'force-confold,force-confdef'
         
     - name: Check if a reboot is required.
       ansible.builtin.stat:
